@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3sn7iym4l20x"]
+
+[ext_resource type="Script" path="res://mouse/RigidBody2D.gd" id="1_pkjx5"]
+[ext_resource type="Texture2D" uid="uid://cbah37gxqs5aj" path="res://assets/ballBlue_10.png" id="2_w4joh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ykre4"]
+bounce = 0.52
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ilqie"]
+radius = 32.0
+
+[node name="Throwable" type="RigidBody2D"]
+position = Vector2(124, 35)
+input_pickable = true
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_ykre4")
+can_sleep = false
+script = ExtResource("1_pkjx5")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ilqie")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6.79493e-06, 0.500005)
+scale = Vector2(0.418919, 0.425676)
+texture = ExtResource("2_w4joh")

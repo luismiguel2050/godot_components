@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgif2rgj5y801"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_182a6"]
+size = Vector2(21.5, 639)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfhya"]
+size = Vector2(23.5001, 1073)
+
+[node name="world" type="Node"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 649.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Panel"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/StaticBody2D"]
+position = Vector2(22, 318)
+shape = SubResource("RectangleShape2D_182a6")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 1108.0
+offset_top = 608.0
+offset_right = 1148.0
+offset_bottom = 1677.0
+rotation = 1.5708
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Panel2"]
+visible = false
+position = Vector2(-608, 1108)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel2/StaticBody2D2"]
+position = Vector2(572.5, 619.75)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_jfhya")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 1106.0
+offset_top = 1.0
+offset_right = 1146.0
+offset_bottom = 645.0
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Panel3"]
+visible = false
+position = Vector2(-1106, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel3/StaticBody2D2"]
+position = Vector2(1122, 323)
+shape = SubResource("RectangleShape2D_182a6")

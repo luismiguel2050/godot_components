@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp3xg7tt6xx34"]
+
+[ext_resource type="Script" path="res://players_movements/rotate_and_move/rotate_and_move.gd" id="1_pvecp"]
+[ext_resource type="Texture2D" uid="uid://cxhki5gsl6umc" path="res://assets/icon.svg" id="2_dpikc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sb80o"]
+size = Vector2(126, 128)
+
+[node name="RotateAndMove" type="CharacterBody2D"]
+position = Vector2(568, 315)
+motion_mode = 1
+script = ExtResource("1_pvecp")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dpikc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sb80o")
